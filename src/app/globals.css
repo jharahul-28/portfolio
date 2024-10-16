@@ -32,3 +32,11 @@ body {
     text-wrap: balance;
   }
 }
+
+.font-kolker-brush {
+  font-family: var(--font-kolker-brush);
+}
+
+.font-rajdhaniSemiBold{
+  font-family: var(--font-rajdhaniSemiBold);
+}

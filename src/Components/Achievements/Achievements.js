@@ -36,10 +36,11 @@ const AchievementsDisplay = () => {
             ],
         },
     ];
-
     return (
         <>
-            <p>Achievements</p>
+            <div className="flex flex-row justify-center text-4xl size-full mb-6">
+                <p className="font-rajdhaniSemiBold">Achievements</p>
+            </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 px-2">
                 {achievements.map((achievement, index) => (
                     <CardSpotlight key={index} className="p-6">
