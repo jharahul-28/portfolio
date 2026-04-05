@@ -149,7 +149,7 @@ export default function Contact() {
     setServerError("");
 
     try {
-      const endpoint = process.env.NEXT_PUBLIC_FORMSPREE_URL!;
+      const endpoint = 'https://formspree.io/f/mreorzzj';
       const res = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
@@ -190,10 +190,9 @@ export default function Contact() {
     "w-full px-4 py-3 rounded-xl text-sm text-slate-200 placeholder-slate-500 bg-white/[0.04] border transition-all duration-200 focus:outline-none focus:ring-1 disabled:opacity-50 disabled:cursor-not-allowed";
 
   const inputClass = (field: keyof FormFields) =>
-    `${inputBase} ${
-      errors[field] && touched[field]
-        ? "border-red-500/50 focus:border-red-500/60 focus:ring-red-500/20"
-        : "border-white/[0.08] focus:border-violet-500/50 focus:ring-violet-500/25"
+    `${inputBase} ${errors[field] && touched[field]
+      ? "border-red-500/50 focus:border-red-500/60 focus:ring-red-500/20"
+      : "border-white/[0.08] focus:border-violet-500/50 focus:ring-violet-500/25"
     }`;
 
   return (
