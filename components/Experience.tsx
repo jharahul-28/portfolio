@@ -77,9 +77,6 @@ export default function Experience() {
                 borderColor: "#8b5cf6",
                 borderWidth: "2px",
               },
-              itemLine: {
-                borderColor: "rgba(139,92,246,0.3)",
-              },
             }}
           >
             {experiences.map((exp) => {
