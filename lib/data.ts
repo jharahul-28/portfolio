@@ -141,6 +141,20 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/jharahul-28",
   },
+  {
+    id: 2,
+    title: "Chauffeur",
+    subtitle: "Real-time Driver Ride Management System",
+    description:
+      "A React Native mobile app enabling drivers to manage end-to-end ride workflows with real-time GPS tracking — built for reliability, speed, and a frictionless driver experience.",
+    highlights: [
+      "Engineered full ride workflow management (accept → navigate → complete), cutting driver task execution time by ~25%",
+      "Integrated real-time GPS map tracking to eliminate navigation errors, reducing pickup delays by ~20%",
+      "Implemented Firebase Authentication with <1s login response time and near-zero failure rate",
+      "Built a reusable component library for consistent UI across screens, accelerating development speed by ~30%",
+    ],
+    tech: ["React Native", "Expo", "Firebase", "Google Maps", "TypeScript"],
+  },
 ];
 
 export const skillCategories: SkillCategory[] = [

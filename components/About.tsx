@@ -83,41 +83,63 @@ export default function About() {
           animate={isInView ? "visible" : "hidden"}
           className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start"
         >
-          {/* Left: Professional Summary */}
-          <motion.div variants={fadeInUp} className="space-y-5">
-            <h3 className="text-2xl font-semibold text-slate-100">
-              Building systems that scale, perform, and matter.
-            </h3>
-            <div className="space-y-4 text-slate-400 leading-relaxed">
-              <p>
-                I'm a Full Stack Software Engineer based in Bangalore, India, with a strong
-                foundation in both backend systems engineering and modern frontend development.
-                My work spans from refactoring complex legacy banking infrastructure to building
-                real-time collaboration platforms and AI-powered compliance tools.
-              </p>
-              <p>
-                At GlobalLogic, I dove deep into 120+ modules of a legacy banking system —
-                reverse-engineering undocumented code, identifying inefficiencies, and
-                modernizing core components with Spring Boot. The result was a 40% reduction
-                in delivery time and 30% improvement in system performance. I was honored with
-                the Spotlight of the Month award for these contributions.
-              </p>
-              <p>
-                During my time at CricsHub, I built a full-stack cricket tournament management
-                platform from the ground up — including a real-time WebSocket scoring engine,
-                REST APIs for tournament operations, and a live tracking UI in React Native
-                that reduced manual management effort by 60%.
-              </p>
-              <p>
-                Beyond my professional work, I actively sharpen my problem-solving skills
-                through competitive programming, having solved 380+ DSA problems and placed
-                in the top 1% at CodeChef Starters 130. I believe great engineers combine
-                technical depth with a product mindset — and I bring both to every project.
+          {/* Left: Positioning + Impact Stats */}
+          <motion.div variants={fadeInUp} className="space-y-6">
+            <div>
+              <h3 className="text-2xl font-semibold text-slate-100 mb-3">
+                Building systems that scale, perform, and matter.
+              </h3>
+              <p className="text-slate-400 leading-relaxed">
+                Full Stack Engineer specializing in backend systems and mobile development —
+                from modernizing legacy banking infrastructure to shipping real-time apps and
+                AI-powered platforms.
               </p>
             </div>
 
-            {/* Location + Status */}
-            <div className="flex flex-wrap gap-3 pt-2">
+            {/* Impact Stats */}
+            <ul className="space-y-2.5">
+              {[
+                {
+                  metric: "40%",
+                  label: "faster delivery",
+                  context: "Modernized 120+ legacy banking modules at GlobalLogic — Spotlight of the Month",
+                },
+                {
+                  metric: "30%",
+                  label: "perf. boost",
+                  context: "Strategic Spring Boot refactoring across core banking services",
+                },
+                {
+                  metric: "60%",
+                  label: "less manual work",
+                  context: "Real-time WebSocket scoring engine powering live cricket tournaments",
+                },
+                {
+                  metric: "380+",
+                  label: "DSA solved",
+                  context: "Top 1% globally at CodeChef Starters 130",
+                },
+              ].map(({ metric, label, context }) => (
+                <li
+                  key={metric}
+                  className="flex items-center gap-4 glass rounded-xl px-4 py-3 hover:border-violet-500/20 transition-colors duration-200"
+                >
+                  <div className="flex-shrink-0 w-16 text-right">
+                    <span className="gradient-text text-xl font-bold block leading-none">
+                      {metric}
+                    </span>
+                    <span className="text-[10px] text-slate-500 uppercase tracking-wide">
+                      {label}
+                    </span>
+                  </div>
+                  <div className="w-px self-stretch bg-white/[0.06]" />
+                  <p className="text-xs text-slate-400 leading-relaxed">{context}</p>
+                </li>
+              ))}
+            </ul>
+
+            {/* Status Badges */}
+            <div className="flex flex-wrap gap-2.5 pt-1">
               {[
                 { label: "Bangalore, India", color: "violet" },
                 { label: "Open to Work", color: "emerald" },
